@@ -10,7 +10,7 @@ var ran = [];
 var play = [];
 //tao mang random 5 so khac nhau
 
-for (let i = 0; ran.length < 5; i++) {
+for (let i = 0;i < 5; i++) {
     var ranNumber = parseInt(Math.random()*46)
   if(!ran.includes(ranNumber)){
   ran.push(ranNumber);
@@ -18,12 +18,12 @@ for (let i = 0; ran.length < 5; i++) {
 }
 //tao mang nguoi dung nhap 5 so khac nhau
 for (let i = 0; play.length < 5; i++) {
-  var number = prompt("Moi nhap 5 so khac nhau :");
+  var number = prompt("Mời nhập 5 số khác nhau :");
   var luckyNumber = parseInt(number);
   if (luckyNumber >= 0 && luckyNumber <= 45 && !play.includes(luckyNumber)) {
     play.push(luckyNumber);
   } else {
-    alert(`Moi nhap lai so khac ${luckyNumber}`);
+    alert(`Mời nhập lại số khác số ${luckyNumber}`);
   }
 }
 
@@ -35,7 +35,7 @@ for (var i = 0; i < ran.length; i++) {
   for (var j = 0; j < play.length; j++) {
     if (ran[i] == play[j]) {
       dem++;
-    }
+    } 
   }
 }
 if(dem==3){
